@@ -1,0 +1,23 @@
+@use 'src/styles/mixins';
+
+.header {
+  padding-block: 20px;
+  
+  .container {
+    @include mixins.flex(space-between, center);
+  }
+  
+  .logo {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-block: 35px;
+
+    .burger-button {
+      display: none;
+    }
+  }
+}

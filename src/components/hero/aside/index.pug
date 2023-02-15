@@ -1,0 +1,15 @@
+aside.aside
+  h3.aside-title New
+  ul.aside-list
+    - const articles = [
+    - {title: 'Hydrogen VS Electric Cars', descr: 'Will hydrogen-fueled cars ever catch up to EVs?'},
+    - {title: 'The Downsides of AI Artistry', descr: 'What are the possible adverse effects of on-demand AI image generation?'},
+    - {title: 'Is VC Funding Drying Up?', descr: 'Private funding by VC firms is down 50% YOY. We take a look at what that means.'},
+    -];
+    each val in articles
+      li.aside-item
+        article
+          h4.title= val.title
+          p.descr= val.descr
+          a(href='#')
+    

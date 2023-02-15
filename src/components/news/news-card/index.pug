@@ -1,0 +1,9 @@
+mixin newsCard(img, altImg, index, title, descr)
+  li.news
+    img.news-preview(src= img, alt= altImg)
+    div.news-descr-wrapper
+      div.news-index= '0' + (index + 1)
+      h4.news-title= title
+      p.news-descr= descr
+      a(href='#')
+  

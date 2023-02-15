@@ -1,0 +1,65 @@
+@import "src/styles/mixins";
+
+.news {
+  $offset: 15px;
+  @include flex;
+  position: relative;
+  gap: var(--elem-offset);
+  &-preview {
+    max-width: 35%;
+    height: 130px;
+  }
+  &-index {
+    color: var(--grayish-blue);
+    font-weight: 700;
+    font-size: 32px;
+  }
+  &-title {
+    font-weight: 800;
+  }
+  &-descr {
+    font-size: 14px;
+    line-height: 1.8em;
+    color: var(--dark-grayish-blue);
+  }
+  &-descr-wrapper {
+  @include flex(space-between, null, column);
+  a {
+    position: absolute;
+    inset: 0;
+    transition: color var(--trans-opt);
+  }
+  &:has(a:hover) {
+    .news-title {
+      color: var(--soft-red);
+    }
+  }
+}
+}
+
+@media (min-width: 768px) {
+  .news {
+    flex-direction: column;
+    flex-basis: 30%;
+    gap: 0;
+    &-preview {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      margin-bottom: 5px;
+    }
+    &-descr-wrapper {
+      gap: 5px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .news {
+    flex-direction: row;
+    flex-basis: 30%;
+    gap: var(--elem-offset);
+    &-preview {
+      margin-bottom: 0;
+    }
+  }
+}

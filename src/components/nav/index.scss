@@ -1,0 +1,21 @@
+@import 'src/styles/mixins';
+
+.nav {
+  display: none;
+  a {
+    transition: color var(--trans-opt);
+  }
+  a:hover {
+    color: var(--soft-orange);
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+    ul {
+      @include flex;
+      gap: var(--elem-offset);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.burger-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  transition: width 300ms ease-in;
+  background-color: var(--of-white);
+  padding-block: 20% 30%;
+  
+  a:active {
+    color: var(--soft-red);
+  }
+
+  .burger-nav {
+    padding-inline: 20px;
+    font-size: 20px;
+    line-height: 3em;
+  }
+  
+  .close-button {
+    $pos: 30px;
+    position: absolute;
+    top: $pos;
+    right: $pos;
+    font-size: 26px;
+    font-weight: 800;
+    
+    &:active {
+      color: var(--soft-red);
+    }
+  }
+
+  &.burger-menu-open {
+    display: block;
+    width: 70vw;
+  }
+}

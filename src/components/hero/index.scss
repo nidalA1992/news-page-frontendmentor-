@@ -1,0 +1,71 @@
+@import "aside/index";
+@import '../../styles/mixins';
+
+.hero {
+  .article {
+    @include flex(null, null, column);
+    gap: var(--elem-offset);
+
+    &-preview-img {
+      height: 300px;
+      background-image: url("static/images/image-web-3-mobile.jpg");
+      background-size: cover;
+    }
+
+    &-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1em;
+      max-width: 80%;
+      margin-bottom: var(--elem-offset);
+    }
+
+    &-desc {
+      margin-bottom: var(--elem-offset);
+      line-height: 1.7em;
+      font-size: 14px;
+      word-spacing: 0.2em;
+      color: var(--dark-grayish-blue)
+    }
+
+    &-more-button {
+      @include button;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    .article {
+      flex-shrink: 1.4;
+      &-preview-img {
+        background-image: url("static/images/image-web-3-desktop.jpg");
+      }
+      
+      &-wrapper {
+        @include flex;
+        gap: var(--elem-offset);
+      }
+      &-title {
+        font-size: 42px;
+      }
+      
+      &-descr-wrapper {
+        flex-shrink: 1.3;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    .container {
+      @include flex;
+      gap: var(--elem-offset);
+    }
+    
+    .article {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+- const titles = ['Home', 'New', 'Popular', 'Trending','Categories'];
+
+div.burger-menu#burger-menu
+  nav.burger-nav
+    ul.burger-nav__list
+      each val in titles
+        li.burger-nav__item
+          a(href='#')= val
+  button.close-button.button#close-burger-button ╳

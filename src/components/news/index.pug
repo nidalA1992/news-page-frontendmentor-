@@ -1,0 +1,27 @@
+include news-card/index
+
+section.news-section
+  div.container
+    - const cardsData = [
+    -   {
+    -      img: 'images/image-retro-pcs.jpg', 
+    -      imgAlt: 'Reviving Retro PCs', 
+    -      title: 'Reviving Retro PCs', 
+    -      descr: "What happens when old PCs are given modern upgrades?"
+    -   },
+    -   {
+    -      img: 'images/image-top-laptops.jpg',
+    -      imgAlt: 'Top 10 Laptops of 2022',
+    -      title: 'Top 10 Laptops of 2022',
+    -      descr: "Our best picks for various needs and budgets."
+    -   },
+    -   {
+    -      img: 'images/image-gaming-growth.jpg',
+    -      imgAlt: 'The Growth of Gaming',
+    -      title: 'Reviving Retro PCs',
+    -      descr: "How the pandemic has sparked fresh opportunities."
+    -   },
+    -];
+    ul.news-cards
+      each val, index in cardsData
+        +newsCard(val.img, val.imgAlt, index, val.title, val.descr)
