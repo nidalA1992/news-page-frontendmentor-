@@ -44,6 +44,12 @@ a {
 }
 
 @media (min-width: 768px) {
+
+  body {
+    padding-block: 50px;
+  }
+
+
   .container {
     padding-inline: 50px;
   }

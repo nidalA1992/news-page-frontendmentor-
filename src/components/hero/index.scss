@@ -47,7 +47,8 @@
         gap: var(--elem-offset);
       }
       &-title {
-        font-size: 42px;
+        font-size: 52px;
+        max-width: 40%;
       }
       
       &-descr-wrapper {

@@ -1,8 +1,9 @@
 @import 'src/styles/mixins';
 
-.nav {
+.header-nav {
   display: none;
   a {
+    color: var(--dark-grayish-blue);
     transition: color var(--trans-opt);
   }
   a:hover {
@@ -11,7 +12,7 @@
 }
 
 @media (min-width: 768px) {
-  .nav {
+  .header-nav {
     display: block;
     ul {
       @include flex;

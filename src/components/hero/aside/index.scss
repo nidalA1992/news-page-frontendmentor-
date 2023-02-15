@@ -48,7 +48,9 @@
 @media (min-width: 768px) {
   .aside {
     margin-bottom: 0;
-    
+    .aside-title {
+      font-size: 28px;
+    }
     .aside-item {
       padding-top: 35px;
       &:not(:last-child) {

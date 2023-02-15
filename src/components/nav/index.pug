@@ -1,6 +1,6 @@
-nav.nav
+nav.header-nav
   ul.nav__list
     - const titles = ['Home', 'New', 'Popular', 'Trending','Categories'];
     each val in titles
       li.nav__list-item
-        a(href='#')= val
+        a(href='#' + val)= val
